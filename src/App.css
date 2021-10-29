@@ -1,42 +1,69 @@
-.App {
-  text-align: center;
-}
-.container {
+.formSection{
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  background-color: bisque;
-  box-sizing: border-box;
-  flex-wrap: wrap;
 }
-.card {
-  cursor: pointer;
-  width: 550px;
-  padding: 12px;
-  border-radius: 8px;
+.formSection > input{
+  font-size: 20px;
+  padding: 0 1rem;
+  line-height: 2rem;
+  border-radius: 50px;
   background-color: #fff;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 10px;
+  margin-right: 20px;
+}
+.formSection > button{
+  font-size: 20px;
+  padding: 0 1rem;
+  line-height: 2rem;
+  border-radius: 50px;
+  background-color: #000;
+  color: #00ffff;
 }
 
-.card-image {
-  width: 100%;
-  height: 25%;
-  object-fit: cover;
-}
-.card-image img:hover {
-  transition: all 0.5s;
-  padding-top: 5px;
-}
-.card-image img {
-  width: 100%;
-  height: 100%;
-}
-.card-text {
-  font-weight: 600;
+.title{
+  font-family: system-ui, sans-serif;
   text-align: center;
+}
+
+.result{
+  padding: 90px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.result > .card{
+  display: flex;
+}
+.card > a > span > .resultImage{
+  flex: 100% 1;
+  margin-top: 1rem;
+  border-radius: 20px;
+  width: 350px;
+  padding: 10px;
+  cursor: pointer;
+}
+.card > a > .username{
+  text-align: center;
+  font-family: system-ui, sans-serif;
+}
+
+
+
+@media screen and (max-width: 501px){
+  .title{
+       font-size: 27px;
+  }
+  .formSection > input{
+       width: 50%;
+       font-size: 15px;
+  }
+  .formSection > button{
+       font-size: 15px;
+  }
+  .result{
+       display: grid;
+       grid-template-columns: auto;
+       padding: 0;
+  }
+  .card > a > span > .resultImage{
+       width: 93%!important;
+  }
 }
